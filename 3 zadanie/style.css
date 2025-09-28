@@ -67,7 +67,7 @@ body {
 #anketa { order: 3; }
 
 table {
-    width: 80%;
+    width: 75%;
     border-collapse: collapse;
     margin: 15px 0;
 }
@@ -128,3 +128,4 @@ tr:nth-child(odd) { background-color: white; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
+
