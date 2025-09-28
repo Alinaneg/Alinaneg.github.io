@@ -1,3 +1,15 @@
+/* ===== MOBILE FIRST СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -7,13 +19,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
+/* ШАПКА - растягиваем на всю ширину */
 .header {
     background-color: #c0c0c0;
     color: #000000;
-    width: 100vw;
+    width: 100%;
+    min-width: 100%;
     padding: 15px 0;
     text-align: center;
     display: flex;
@@ -27,11 +40,17 @@ body {
     width: 75px;
     height: 75px;
     margin: 0;
+    background-color: #a0a0a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* МЕНЮ - растягиваем на всю ширину */
 .menu {
     background-color: #444444;
-    width: 100vw;
+    width: 100%;
+    min-width: 100%;
     padding: 0;
     text-align: center;
     order: 2;
@@ -42,8 +61,18 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    border-bottom: 1px solid #555;
 }
 
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* КОНТЕЙНЕР */
 .container {
     width: 100%;
     margin: 0 auto;
@@ -54,13 +83,14 @@ body {
     order: 3;
     display: flex;
     flex-direction: column;
-    overflow-x:hidden;
 }
 
+/* Порядок на мобильных: таблица → список → форма */
 #table { order: 1; }
 #spisok { order: 2; }
 #anketa { order: 3; }
 
+/* ОБЩИЕ СТИЛИ */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -78,21 +108,36 @@ tr:nth-child(odd) { background-color: white; }
 
 .form-group { margin-bottom: 15px; }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ФУТЕР - растягиваем на всю ширину */
 .footer {
     background-color: #444444;
     color: white;
     text-align: center;
     padding: 20px 0;
-    width: 100vw;
+    width: 100%;
+    min-width: 100%;
     order: 4;
 }
 
+/* ===== DESKTOP ВЕРСИЯ ===== */
 @media (min-width: 768px) {
     .header {
         flex-direction: row;
         justify-content: flex-start;
         padding-left: 20px;
-        order: 2;
+        order: 1;
     }
     
     .logo {
@@ -101,25 +146,29 @@ tr:nth-child(odd) { background-color: white; }
     }
     
     .menu {
-        order: 1;
+        order: 2;
         padding: 10px 0;
     }
     
     .menu a {
         display: inline-block;
         border-bottom: none;
+        border-right: 1px solid #555;
+    }
+    
+    .menu a:last-child {
+        border-right: none;
     }
     
     .container {
         width: 960px;
         margin: 20px auto;
         order: 3;
+        display: block;
     }
-
+    
+    /* Порядок на десктопе: список → таблица → форма */
     #spisok { order: 1; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
-
-
-
