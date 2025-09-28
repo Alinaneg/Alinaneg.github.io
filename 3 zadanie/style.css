@@ -1,11 +1,3 @@
-/* ===== ОБЩИЕ СТИЛИ (Mobile First) ===== */
-/* Эти стили применяются для всех устройств, начиная с мобильных */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
@@ -209,4 +201,5 @@ input, textarea, select {
     #anketa {
         order: 3; /* Форма третьей */
     }
+
 }
