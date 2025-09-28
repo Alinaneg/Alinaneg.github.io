@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адаптивный сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="menu">
-        <a href="#spisok">Ссылка меню 1</a>
-        <a href="#table">Ссылка 2</a>
-        <a href="#anketa">Ссылка 3</a>
-    </nav>
-    <header class="header">
-        <img class="logo" src="logo.png" alt="лого">
-        <h1>Название сайта</h1>
-    </header>
     
+    <div class="header">
+        <img class="logo" src="logo.png" alt="лого">
+        <h1>Тестовый сайт</h1>
+    </div>
+    
+    <nav class="menu">
+            <a href="#spisok">Список ссылок</a>
+            <a href="#table">Таблица</a>
+            <a href="#anketa">Форма для заполнения</a>
+    </nav>
     
     <main class="container">
-        <!-- В HTML списка ссылок идет ПЕРЕД таблицей (как в задании) -->
-        <section id="spisok">
+    <section id="spisok">
             <h2>Список гиперссылок</h2>
             <ol>
                 <li><a href="http://kubsu.ru">Cсылка на главную страницу КубГУ</a></li>
@@ -39,6 +37,10 @@
                     <map name="Mymap">
                         <area shape="rect" coords="0,0,100,120" href="http://kubsu.ru" alt="Прямоугольник">
                     </map>
+                    <map name="Mymap2"> 
+                <img src="figyra.png" usemap="#Mymap" width="200" height="150" alt="Фигура2">
+                    <area shape="circle" coords="50,60,30" href="https://kubsu.ru" alt="Круг">
+                 </map>
                 </li>
                 <li><a href="">Ссылка с пустым href</a></li>
                 <li><a>Ссылка без href</a></li>
@@ -49,7 +51,7 @@
                 <li><a href="ftp://user:password@ftp.example.com/file.txt">Ссылка на файл на FTP сервере</a></li>
             </ul>
         </section>
-        
+
         <section id="table">
             <h2>Таблица</h2>
             <table>
@@ -100,6 +102,7 @@
             </table>
         </section>
         
+        
         <section id="anketa">
             <h2>Форма для заполнения</h2>
             <form action="/" method="POST">
@@ -109,7 +112,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" pattern="[0-9+\-\s\(\)]*" title="Разрешены только цифры, пробелы и символы + - ( )" required>
+                    <input type="tel" id="phone" pattern="[0-9+\-\s\(\)]*" title="Разрешены только цифры" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -157,14 +160,14 @@
                     <label for="agreement">Принимаю пользовательское соглашение</label>
                 </div>
                 <div class="form-group">
-                   <input type="submit" value="Сохранить" class="submit-button">
+                   <input type="submit" value="Сохранить">
                 </div>
             </form>
         </section>
     </main>
     
     <footer class="footer">
-        <p>(с) Сергей Синица</p>
+        <p>Alina</p>
     </footer>
 </body>
 </html>
