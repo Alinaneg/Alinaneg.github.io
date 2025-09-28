@@ -50,7 +50,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -125,3 +125,4 @@ tr:nth-child(odd) { background-color: white; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
+
