@@ -142,12 +142,9 @@ tr:nth-child(odd) {
     }
     
     /* СТИЛИ ДЛЯ СПИСКА ССЫЛОК - мобильная версия */
-    #spisok li {
+#spisok li {
         margin-bottom: 12px;
         padding: 8px 0;
-        line-height: 1.5;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
     }
     
     /* Улучшаем отображение длинных ссылок на мобильных */
@@ -169,3 +166,4 @@ tr:nth-child(odd) {
         text-decoration: underline;
     }
 }
+
