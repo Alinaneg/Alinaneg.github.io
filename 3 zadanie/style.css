@@ -48,7 +48,10 @@ body {
     text-align: center;
     order: 2; /* На мобильных меню ВТОРЫМ (после шапки) */
 }
-
+#spisok ol, #spisok ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
 /* ССЫЛКИ МЕНЮ - мобильная версия */
 .menu a {
     color: #f0f0f0;
@@ -203,3 +206,4 @@ input, textarea, select {
     }
 
 }
+
