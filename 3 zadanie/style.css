@@ -51,7 +51,7 @@ body {
 
 .container {
     width: 100%;
-    margin: 0 auto;
+    margin: 0px 0;
     background-color: white;
     padding: 10px;
     border: 1px solid #ddd;
@@ -128,6 +128,7 @@ tr:nth-child(odd) { background-color: white; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
+
 
 
 
