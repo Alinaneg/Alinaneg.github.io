@@ -1,52 +1,63 @@
-/* ОБЩИЕ СТИЛИ */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
-    background-color: #c0c0c0; 
+    background-color: #c0c0c0;
     color: #000000;
     width: 100%;
     padding: 15px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    order: 1;
 }
-   
 
 .logo {
     width: 75px;
-    height: 75px; 
+    height: 75px;
     margin: 0;
-    float: left;
 }
 
-
 .menu {
-    background-color: #444444; 
+    background-color: #444444;
     width: 100%;
-    padding: 10px 0;
+    padding: 0;
     text-align: center;
+    order: 2;
 }
 
 .menu a {
     color: #f0f0f0;
     text-decoration: none;
     padding: 10px 20px;
-    display: inline-block;
+    display: block;
 }
 
-
- .container {
-    width: 960px;
-    margin: 20px auto;
+.container {
+    width: 100%;
+    margin: 0 auto;
     background-color: white;
     padding: 20px;
     border: 1px solid #ddd;
-} 
+    flex: 1;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+}
 
+#table { order: 1; }
+#spisok { order: 2; }
+#anketa { order: 3; }
 
 table {
     width: 100%;
@@ -58,21 +69,12 @@ th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    color: #000000; 
 }
 
+tr:nth-child(even) { background-color: #f2f2f2; }
+tr:nth-child(odd) { background-color: white; }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-    background-color: white;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
+.form-group { margin-bottom: 15px; }
 
 .footer {
     background-color: #444444;
@@ -80,91 +82,39 @@ tr:nth-child(odd) {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    margin-top: 30px;
+    order: 4;
 }
 
-/* ===== МОБИЛЬНАЯ ВЕРСИЯ (до 768px) ===== */
-/* Эти стили ПЕРЕОПРЕДЕЛЯЮТ десктопные стили для мобильных устройств */
-
-@media (max-width: 767px) {
-    /* ОСНОВНАЯ СТРУКТУРА - мобильная версия */
-    body {
-        flex-direction: column;
-    }
-    
-    /* ШАПКА - мобильная версия */
+@media (min-width: 768px) {
     .header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding-left: 0;
-        order: 1; /* На мобильных шапка ПЕРВОЙ */
-    }
-    
-    /* ЛОГОТИП - мобильная версия */
-    .logo {
-        float: none; /* На мобильных убираем float */
-        margin-right: 0;
-    }
-    
-    /* МЕНЮ - мобильная версия (вертикальное) */
-    .menu {
-        order: 2; /* На мобильных меню ВТОРЫМ (после шапки) */
-        padding: 0;
-    }
-    
-    /* ССЫЛКИ МЕНЮ - мобильная версия */
-    .menu a {
-        display: block; /* Вертикальный список */
-        padding: 10px 20px;
-    }
-    
-    /* КОНТЕЙНЕР КОНТЕНТА - мобильная версия */
-    .container {
-        width: 100%;
-        margin: 0 auto;
-        order: 3; /* На мобильных контент ТРЕТЬИМ (после меню) */
-    }
-    
-    /* ===== ПОРЯДОК СЕКЦИЙ НА МОБИЛЬНЫХ ===== */
-    /* На смартфонах таблица ВЫШЕ списка ссылок (используем order) */
-    
-    #spisok {
-        order: 2; /* Список ссылок вторым */
-    }
-    
-    #table {
-        order: 1; /* Таблица первой (визуально выше) */
-    }
-    
-    #anketa {
-        order: 3; /* Форма третьей */
-    }
-    
-    /* СТИЛИ ДЛЯ СПИСКА ССЫЛОК - мобильная версия */
-#spisok li {
-        margin-bottom: 12px;
-    }
-    
-    /* Улучшаем отображение длинных ссылок на мобильных */
-    /* #spisok ol {
+        flex-direction: row;
+        justify-content: flex-start;
         padding-left: 20px;
+        order: 2;
     }
     
-    #spisok ol li {
-        position: relative;
-        padding-left: 25px;
+    .logo {
+        float: left;
+        margin-right: 15px;
     }
     
-    #spisok a {
-        color: #0066cc;
-        text-decoration: none;
+    .menu {
+        order: 1;
+        padding: 10px 0;
     }
     
-    #spisok a:hover {
-        text-decoration: underline;
-    } */
+    .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    
+    .container {
+        width: 960px;
+        margin: 20px auto;
+        order: 3;
+    }
+
+    #spisok { order: 1; }
+    #table { order: 2; }
+    #anketa { order: 3; }
 }
-
-
-
