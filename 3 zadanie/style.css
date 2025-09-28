@@ -54,6 +54,7 @@ body {
     order: 3;
     display: flex;
     flex-direction: column;
+    overflow-x:hidden;
 }
 
 #table { order: 1; }
@@ -119,5 +120,6 @@ tr:nth-child(odd) { background-color: white; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
+
 
 
