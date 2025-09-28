@@ -13,7 +13,7 @@ body {
 .header {
     background-color: #c0c0c0;
     color: #000000;
-    width: 100%;
+    width: 100vw;
     padding: 15px 0;
     text-align: center;
     display: flex;
@@ -31,7 +31,7 @@ body {
 
 .menu {
     background-color: #444444;
-    width: 100%;
+    width: 100vw;
     padding: 0;
     text-align: center;
     order: 2;
@@ -82,7 +82,7 @@ tr:nth-child(odd) { background-color: white; }
     color: white;
     text-align: center;
     padding: 20px 0;
-    width: 100%;
+    width: 100vw;
     order: 4;
 }
 
@@ -119,4 +119,5 @@ tr:nth-child(odd) { background-color: white; }
     #table { order: 2; }
     #anketa { order: 3; }
 }
+
 
