@@ -52,6 +52,20 @@ body {
     padding-left: 20px;
     margin: 15px 0;
 }
+#spisok li {
+    margin-bottom: 12px;
+    padding: 8px 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#spisok a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
 /* ССЫЛКИ МЕНЮ - мобильная версия */
 .menu a {
     color: #f0f0f0;
@@ -206,4 +220,5 @@ input, textarea, select {
     }
 
 }
+
 
