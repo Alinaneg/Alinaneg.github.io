@@ -1,0 +1,212 @@
+/* ===== ОБЩИЕ СТИЛИ (Mobile First) ===== */
+/* Эти стили применяются для всех устройств, начиная с мобильных */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ШАПКА САЙТА - для мобильных и всех устройств */
+.header {
+    background-color: #c0c0c0; 
+    color: #000000;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    order: 1; /* На мобильных шапка ПЕРВОЙ */
+}
+
+/* ЛОГОТИП - для мобильных и всех устройств */
+.logo {
+    width: 75px;
+    height: 75px; 
+    margin: 0;
+    /* background-color: #a0a0a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; */
+    float: none; /* На мобильных убираем float */
+}
+
+/* ===== МОБИЛЬНАЯ ВЕРСИЯ (до 768px) ===== */
+/* Эти стили работают ТОЛЬКО на мобильных устройствах */
+
+/* МЕНЮ - мобильная версия (вертикальное) */
+.menu {
+    background-color: #444444; 
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    order: 2; /* На мобильных меню ВТОРЫМ (после шапки) */
+}
+
+/* ССЫЛКИ МЕНЮ - мобильная версия */
+.menu a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block; /* Вертикальный список */
+}
+
+
+/* КОНТЕЙНЕР КОНТЕНТА - мобильная версия */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    flex: 1;
+    order: 3; /* На мобильных контент ТРЕТЬИМ (после меню) */
+    display: flex;
+    flex-direction: column;
+} 
+
+/* ===== ПОРЯДОК СЕКЦИЙ НА МОБИЛЬНЫХ ===== */
+/* На смартфонах таблица ВЫШЕ списка ссылок (используем order) */
+
+#spisok {
+    order: 2; /* Список ссылок вторым */
+}
+
+#table {
+    order: 1; /* Таблица первой (визуально выше) */
+}
+
+#anketa {
+    order: 3; /* Форма третьей */
+}
+
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ УСТРОЙСТВ ===== */
+/* Эти стили не зависят от размера экрана */
+
+/* ТАБЛИЦА - для всех устройств */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: #000000; 
+}
+
+/* Четные строки таблицы */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Нечетные строки таблицы */
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* ФОРМА - для всех устройств */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* ФУТЕР - для всех устройств */
+.footer {
+    background-color: #444444;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 30px;
+    order: 4; /* Футер всегда последний */
+}
+
+/* ===== ПЛАНШЕТЫ И ДЕСКТОПЫ (768px и выше) ===== */
+/* Эти стили ПЕРЕОПРЕДЕЛЯЮТ мобильные стили для больших экранов */
+
+@media (min-width: 768px) {
+    /* ОСНОВНАЯ СТРУКТУРА - планшеты и десктопы */
+    body {
+        flex-direction: column; /* Вертикальная структура */
+        flex-wrap: nowrap;
+    }
+    
+    /* МЕНЮ - планшеты и десктопы (горизонтальное, ВЫШЕ шапки) */
+    .menu {
+        width: 100%; /* Меню на всю ширину */
+        order: 1; /* Меню ПЕРВЫМ (выше шапки) как в исходном варианте */
+        padding: 10px 0;
+    }
+    
+    /* ШАПКА - планшеты и десктопы */
+    .header {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+        order: 2; /* Шапка ВТОРОЙ (после меню) */
+    }
+    
+    /* ЛОГОТИП - планшеты и десктопы */
+    .logo {
+        float: left; /* Включаем float для выравнивания */
+        margin-right: 15px;
+    }
+    
+    /* ССЫЛКИ МЕНЮ - планшеты и десктопы */
+    .menu a {
+        display: inline-block; /* Горизонтальное меню */
+        border-bottom: none;
+    }
+    
+    /* КОНТЕЙНЕР КОНТЕНТА - планшеты и десктопы */
+    .container {
+        width: 960px; /* Фиксированная ширина как в исходном дизайне */
+        order: 3; /* Контент третьим (после шапки) */
+        flex-direction: column;
+        margin: 20px auto; /* Центрирование */
+    }
+    
+    /* ===== ПОРЯДОК СЕКЦИЙ НА ПЛАНШЕТАХ И ДЕСКТОПАХ ===== */
+    /* Возвращаем исходный порядок из HTML (таблица ПОСЛЕ списка ссылок) */
+    
+    #spisok {
+        order: 1; /* Список ссылок первым (как в HTML) */
+    }
+    
+    #table {
+        order: 2; /* Таблица второй (после списка ссылок) */
+    }
+    
+    #anketa {
+        order: 3; /* Форма третьей */
+    }
+}
