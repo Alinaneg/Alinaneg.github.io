@@ -147,7 +147,7 @@ tr:nth-child(odd) {
     }
     
     /* Улучшаем отображение длинных ссылок на мобильных */
-    #spisok ol {
+    /* #spisok ol {
         padding-left: 20px;
     }
     
@@ -163,7 +163,8 @@ tr:nth-child(odd) {
     
     #spisok a:hover {
         text-decoration: underline;
-    }
+    } */
 }
+
 
 
